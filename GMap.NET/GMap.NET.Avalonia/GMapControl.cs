@@ -2269,6 +2269,7 @@ namespace GMap.NET.Avalonia
             if (_core.IsStarted)
             {
                 _core.OnMapZoomChanged -= ForceUpdateOverlays;
+                _core.OnCurrentPositionChanged -= CoreOnCurrentPositionChanged;
                 _core.OnMapClose();
             }
         }
